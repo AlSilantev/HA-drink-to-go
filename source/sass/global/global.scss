@@ -1,1 +1,38 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее*/
+@import "variables.scss";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+
+  flex-direction: column;
+  min-width: 320px;
+  max-height: 1440px;
+  margin: 0;
+
+  font-family: $base-font-family;
+  font-size: 14px;
+  line-height: 20px;
+  word-break: break-word;
+  color: $base-black;
+
+  background-color: $base-white;
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}

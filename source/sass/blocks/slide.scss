@@ -1,0 +1,134 @@
+@import "../global/variables.scss";
+
+.slide {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 20px 20px 60px;
+
+  align-items: center;
+  justify-content: center;
+
+  &--decaf-flat-white {
+    background-color: $flat-white;
+  }
+
+  &--lavender-latte {
+    background-color: $lavender-latte;
+  }
+
+  &--triple-espresso {
+    background-color: $espresso;
+  }
+}
+
+.slide__title {
+  margin-bottom: 10px;
+
+  font-size: 36px;
+  line-height: 48px;
+  text-transform: none;
+}
+
+.slide__product-description {
+  display: block;
+  width: 280px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.slide__image-wrapper {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .slide {
+    position: relative;
+
+    flex-direction: column;
+    padding: 0 0 188px;
+
+    background: none;
+
+    &--decaf-flat-white .slide__description {
+      background-color: $flat-white;
+    }
+
+    &--lavender-latte .slide__description {
+      background-color: $lavender-latte;
+    }
+
+    &--triple-espresso .slide__description {
+      background-color: $espresso;
+    }
+  }
+
+  .slide__description {
+    padding: 60px 80px 308px;
+  }
+
+  .slide__title {
+    margin-bottom: 16px;
+
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  .slide__product-description {
+    width: 100%;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .slide__image-wrapper {
+    position: absolute;
+    bottom: 0;
+
+    margin: 0;
+  }
+
+  .slide__image-wrapper img {
+    width: 476px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slide {
+    flex-direction: row-reverse;
+    padding: 30px 105px 84px;
+
+    &--decaf-flat-white {
+      background-color: $flat-white;
+    }
+
+    &--lavender-latte {
+      background-color: $lavender-latte;
+    }
+
+    &--triple-espresso {
+      background-color: $espresso;
+    }
+  }
+
+  .slide .slide__description {
+    display: flex;
+    flex-direction: column;
+    width: 625px;
+    padding: 150px 0 158px 30px;
+
+    text-align: left;
+
+    background: none;
+
+    align-items: flex-start;
+  }
+
+  .slide__image-wrapper {
+    position: static;
+  }
+
+  .slide__image-wrapper img {
+    width: 600px;
+  }
+}

@@ -1,0 +1,143 @@
+@import "../global/variables.scss";
+
+.range-scale {
+  width: 280px;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+}
+
+.range-scale__range {
+  position: relative;
+
+  height: 2px;
+  margin-bottom: 35px;
+
+  background-color: $light-grey;
+}
+
+.range-scale__range-bar {
+  position: relative;
+  top: -1px;
+
+  width: 260px;
+  height: 4px;
+
+  background-color: $primary-lighter;
+}
+
+.range-scale__toggle {
+  $toggle-width: 24px;
+  $toggle-height: 24px;
+
+  position: absolute;
+  top: calc(50% - $toggle-height / 2);
+
+  display: grid;
+  width: $toggle-width;
+  height: $toggle-height;
+  padding: 0;
+
+  background-color: $base-white;
+  border: 2px $primary-lighter solid;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+
+  &:hover div,
+  &:focus-visible div {
+    border-color: $primary-opacity-025;
+    background-color: $primary-opacity-025;
+  }
+
+  &:active div {
+    border-color: $base-primary;
+    background-color: $base-primary;
+  }
+
+  &--max {
+    right: 0;
+  }
+}
+
+.range-scale__toggle div {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  justify-self: center;
+  align-self: center;
+}
+
+.range-scale:disabled {
+
+  .range-scale__range-bar {
+    background-color: $base-grey;
+  }
+
+  .range-scale__toggle {
+    cursor: default;
+    border-color: $base-grey;
+
+    &:hover div,
+    &:focus-visible div{
+      border-color: $base-grey;
+      background-color: transparent;
+    }
+
+    &:active div {
+      border-color: $base-grey;
+      background-color: transparent;
+    }
+  }
+}
+
+.range-scale__inputs-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &::after {
+    $element-width: 9px;
+    $element-height: 2px;
+
+    position: absolute;
+    top: calc(50% - $element-height / 2);
+    left: calc(50% - $element-width / 2);
+
+    width: $element-width;
+    height: $element-height;
+
+    background-color: $base-grey;
+
+    content: "";
+  }
+}
+
+.range-scale__field {
+  width: 118px;
+  padding: 7px 10px;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .range-scale {
+    width: 100%;
+  }
+
+  .range-scale__range {
+    margin-bottom: 32px;
+  }
+
+
+  .range-scale__range-bar {
+    width: 198px;
+  }
+
+  .range-scale__field {
+    width: 93px;
+  }
+}

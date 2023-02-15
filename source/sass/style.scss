@@ -1,7 +1,24 @@
-/* GLOBAL */
+// Global
 @import "global/variables";
 @import "global/global";
 @import "global/fonts";
+@import "global/button.scss";
+@import "global/clear-link.scss";
+@import "global/clear-list.scss";
+@import "global/field.scss";
+@import "global/title.scss";
+@import "global/visually-hidden.scss";
 
-/* BLOCKS */
+// Blocks
+@import "blocks/page-container.scss";
 @import "blocks/header";
+@import "blocks/header-navigation.scss";
+@import "blocks/website-navigation.scss";
+@import "blocks/badge.scss";
+@import "blocks/slide.scss";
+@import "blocks/buy-section.scss";
+@import "blocks/advantages.scss";
+@import "blocks/catalog.scss";
+@import "blocks/filter.scss";
+@import "blocks/range-scale.scss";
+@import "blocks/control.scss";

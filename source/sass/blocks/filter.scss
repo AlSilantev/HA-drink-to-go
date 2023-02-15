@@ -1,0 +1,74 @@
+.filter,
+.filter__fieldsets-container,
+.filter__fieldset {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.filter__fieldset {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  text-align: left;
+
+  border: none;
+
+  align-items: start;
+
+  &--country-of-origin .control {
+    padding-left: 52px;
+  }
+}
+
+.filter__fieldset-title {
+  display: block;
+  padding: 0;
+  margin-bottom: 32px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  align-self: flex-start;
+}
+
+.filter__fieldsets-container {
+  gap: 24px;
+}
+
+.filter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__fieldsets-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .filter__fieldset {
+    &--price {
+      width: 226px;
+    }
+
+    &--presence-milk {
+      width: 210px;
+    }
+
+    &--country-of-origin {
+      width: 197px;
+    }
+  }
+}
+
+

@@ -1,5 +1,51 @@
+@import "../global/variables.scss";
+
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-link {
+  display: flex;
+  padding: 12px 20px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo-tagline {
+  display: none;
+  width: 126px;
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 16px;
+  text-align: start;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .header__logo-link {
+    padding: 22px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    padding: 0 40px;
+  }
+  
+  .header__logo-wrapper {
+    margin-right: 20px;
+  }
+
+  .header__logo-tagline {
+    display: block;
+  }
 }

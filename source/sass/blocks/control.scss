@@ -1,0 +1,135 @@
+@import "../global/variables.scss";
+
+.control {
+  position: relative;
+
+  display: block;
+  padding-left: 34px;
+}
+
+.control__mark {
+  position: absolute;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  background-color: $base-white;
+  border: 2px $base-grey solid;
+}
+
+.control__label {
+  display: block;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+.control__input + .control__mark {
+  &::before {
+    $element-width: 16px;
+    $element-height: 16px;
+
+    position: absolute;
+    top: calc(50% - $element-height / 2);
+    left: calc(50% - $element-width / 2);
+
+    width: $element-width;
+    height: $element-height;
+
+    border-radius: 50%;
+
+    content: "";
+  }
+}
+
+.control__input {
+  &:hover + .control__mark,
+  &:focus + .control__mark {
+    border-color: $primary-lighter;
+
+    &::before {
+      background-color: $primary-opacity-025;
+    }
+  }
+
+  &:checked + .control__mark {
+    border-color: $base-primary;
+
+    &::before {
+      background-color: $base-primary;
+    }
+  }
+}
+
+.control__input:disabled:checked + .control__mark {
+  &::before {
+    background-color: $light-grey;
+  }
+}
+
+.control__input:disabled:checked + .control__mark,
+.control__input:disabled + .control__mark {
+  border-color: $light-grey;
+}
+
+.control__input:disabled:checked + .control__mark + .control__label,
+.control__input:disabled + .control__mark + .control__label {
+  color: $base-grey;
+}
+
+.control__input:disabled:hover +.control__mark {
+  &::before {
+    background-color: transparent;
+  }
+}
+
+.control__input[type="checkbox"]:not(:disabled) + .control__mark {
+  width: 42px;
+
+  background-color: $base-grey;
+  border-radius: 12px;
+
+  &::before {
+    $element-width: 20px;
+    $element-height: 20px;
+
+    background-color: $base-white;
+
+    top: calc(50% - $element-height / 2);
+    left: 0;
+
+    width: $element-width;
+    height: $element-height;
+
+    border-radius: 50%;
+  }
+}
+
+.control__input[type="checkbox"]:hover,
+.control__input[type="checkbox"]:focus {
+  border-color: $primary-lighter;
+}
+
+.control__input[type="checkbox"]:hover + .control__mark,
+.control__input[type="checkbox"]:focus + .control__mark {
+  background-color: $primary-opacity-025;
+
+  &::before {
+    background-color: $base-white;
+  }
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  background-color: $base-primary;
+
+  &::before {
+    left: calc(100% - 20px);
+  }
+}
+
+.control__input[type="checkbox"]:disabled + .control__mark {
+  background-color: $lightest-grey;
+}

@@ -1,0 +1,73 @@
+@import "../global/variables.scss";
+
+.buy-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  width: 230px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buy-section__price-wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-section__old-price-wrapper {
+  display: flex;
+  max-width: 42px;
+  margin-right: 6px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-section__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+  text-decoration: line-through;
+}
+
+.buy-section__new-price-wrapper {
+  display: flex;
+  max-width: 52px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-section__new-price {
+  display: block;
+  width: 100%;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.buy-section__buy-button {
+  width: 113px;
+  padding: 8px 20px;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .buy-section {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .buy-section {
+    margin: 0;
+
+    justify-self: left;
+  }
+}
