@@ -23,3 +23,20 @@
     line-height: 64px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 100px 40px 120px;
+  }
+
+  .catalog__badge,
+  .catalog__title {
+    width: 100%;
+  }
+
+  .catalog__title {
+    margin-bottom: 40px;
+  }
+}

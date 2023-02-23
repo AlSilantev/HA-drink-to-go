@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.filter {
+  margin-bottom: 36px;
+}
+
 .filter__fieldset {
   width: 100%;
   padding: 0;
@@ -38,6 +42,7 @@
 
 .filter__fieldsets-container {
   gap: 24px;
+  margin-bottom: 35px;
 }
 
 .filter__list {
@@ -47,13 +52,38 @@
   text-align: left;
 }
 
+.filter__buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.filter__buttons-container button {
+  width: 160px;
+  padding: 10px 3px;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.filter__reset-button {
+  color: $base-primary;
+
+  background-color: $base-white;
+}
+
 @media (min-width: $tablet-width) {
+  .filter {
+    margin-bottom: 44px;
+  }
+
   .filter__fieldsets-container {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .filter__fieldset {
@@ -69,6 +99,39 @@
       width: 197px;
     }
   }
+
+  .filter__buttons-container {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .filter__buttons-container button {
+    width: 148px;
+  }
 }
 
+@media (min-width: $desktop-width) {
+  .filter {
+    width: 318px;
+    margin: 0;
+    margin-right: 30px;
 
+    align-self: flex-start;
+  }
+
+  .filter__fieldsets-container {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .filter__buttons-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .filter__buttons-container button {
+    width: 150px;
+  }
+}

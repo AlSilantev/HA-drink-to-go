@@ -1,0 +1,57 @@
+@import "../global/variables.scss";
+
+.pagination__list {
+  display: flex;
+  gap: 20px;
+
+  justify-content: center;
+}
+
+.pagination__link {
+  display: flex;
+  min-width: 40px;
+  height: 40px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+
+  background-color: $base-white;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
+
+  &--current-page {
+    font-weight: 600;
+    color: $base-black;
+
+    background-color: transparent;
+  }
+}
+
+.pagination__link-text {
+  display: none;
+}
+
+@media(min-width: $tablet-width) {
+  .pagination {
+    margin-left: auto;
+  }
+
+  .pagination__item {
+    &:first-child .pagination__link,
+    &:last-child .pagination__link {
+      min-width: max-content;
+    }
+  }
+
+  .pagination__link-text {
+    display: block;
+    padding: 0 20px;
+  }
+
+  .pagination__item svg {
+    display: none;
+  }
+}

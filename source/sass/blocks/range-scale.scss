@@ -141,3 +141,13 @@
     width: 93px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .range-scale__range-bar {
+    width: 294px;
+  }
+
+  .range-scale__field {
+    width: 134px;
+  }
+}
